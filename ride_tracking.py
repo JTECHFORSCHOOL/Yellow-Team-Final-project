@@ -1,14 +1,14 @@
-<<<<<<< HEAD
-# ride_tracking.py
-class Ride:
-    def __init__(self, ride_id, driver_id, passenger_id, pickup_location, dropoff_location, status="In Progress"):
-        self.ride_id = ride_id
-        self.driver_id = driver_id
-        self.passenger_id = passenger_id
-        self.pickup_location = pickup_location
-        self.dropoff_location = dropoff_location
-        self.status = status
-=======
+
+# # ride_tracking.py
+# class Ride:
+#     def __init__(self, ride_id, driver_id, passenger_id, pickup_location, dropoff_location, status="In Progress"):
+#         self.ride_id = ride_id
+#         self.driver_id = driver_id
+#         self.passenger_id = passenger_id
+#         self.pickup_location = pickup_location
+#         self.dropoff_location = dropoff_location
+#         self.status = status
+
 from datetime import date, timedelta
 import customer_related_functions
 import reservation_related_functions
@@ -40,4 +40,3 @@ def VIEWONE():
         print('Ride ID entered is invalid. Please try again.')
 
         mycon.close()
->>>>>>> 3d20d69f24f919416ad32611d13c2cc7d05b757a
