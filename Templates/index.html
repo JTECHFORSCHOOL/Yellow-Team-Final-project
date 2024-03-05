@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ride Tracking and Payment System</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Ride Tracking and Payment System</h1>
+        <div class="links">
+            <a href="{{ url_for('track_ride') }}">Create a New Ride</a>
+            <a href="{{ url_for('payment') }}">Make a New Payment</a>
+        </div>
+    </div>
+</body>
+</html>

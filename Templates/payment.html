@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Make a New Payment</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Make a New Payment</h1>
+        <form action="{{ url_for('payment') }}" method="post" class="form">
+            <label for="ride_id">Ride ID:</label>
+            <input type="text" id="ride_id" name="ride_id"><br>
+            <label for="amount">Amount:</label>
+            <input type="text" id="amount" name="amount"><br>
+            <label for="payment_method">Payment Method:</label>
+            <input type="text" id="payment_method" name="payment_method"><br>
+            <input type="submit" value="Submit" class="btn">
+        </form>
+    </div>
+</body>
+</html>
