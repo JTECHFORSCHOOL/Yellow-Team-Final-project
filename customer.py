@@ -18,8 +18,8 @@ def ADD():
     while True:
         try:
             mob1 = int(input('Please enter your phone number: '))
-            if len(str(mob1)) !=8:
-                print('Error, number can only have 8 digits.')
+            if len(str(mob1)) !=11:
+                print('Error, number can only have 11 digits.')
                 continue
             sql = 'Select * from customer where mobile_1 = %d' % mob1
             mycursor.execute(sql)
@@ -116,13 +116,13 @@ def UPDATE():
                             continue
                         break
 
-                elif choice == '4':
+                elif choice == '3':
                     address = input('Please enter your mailing address: ').upper()
                 else:
                     break
 
                 database = (mob1, email, address, c_id)
-                sql = "UPDATE customer SET mobile_1 = %d, emial = '%s', address = '%s', WHERE c_id = '%s'" % database
+                sql = "UPDATE customer SET mobile_1 = %d, email = '%s', address = '%s', WHERE c_id = '%s'" % database
                 mycursor.execute(sql)
                 mycon.commit()
 
@@ -144,9 +144,9 @@ def UPDATE():
 
         data = mycursor.fetchall()
 
-        h = mycursor.rowcount
+        c = mycursor.rowcount
 
-        if h == 0:
+        if c == 0:
             print('Sorry, cutsomer does not exist.')
         else:
             while True:

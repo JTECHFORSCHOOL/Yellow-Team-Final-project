@@ -20,10 +20,11 @@ while True:
         
         if choice == '1':
             while True:
-                print('n\1. Add new user')
+                print('n\1. Create new user')
                 print('2. View user information')
                 print('3. Update user information')
-                print('4. Back')
+                print('4. Delete user')
+                print('5. Back')
 
         while True:
             choice = input('Please select menu option: ')
@@ -45,9 +46,9 @@ while True:
 
         if choice == '2':
             while True:
-                print('\n1. Create new reservation')
-                print('2. View current reservation')
-                print('3. Cancel reservation')
+                print('\n1. Create new ride')
+                print('2. Update current ride')
+                print('3. Cancel ride')
                 print('4. Back')
 
         while True:
@@ -58,36 +59,27 @@ while True:
                 break
 
             if choice == '1':
-                reservation_related_functions.new_resveration()
+                reservation_related_functions.ADD()
             elif choice == '2':
-                reservation_related_functions.viewall()
+                reservation_related_functions.UPDATE()
             elif choice == '3':
-                reservation_related_functions.close_reservation()
+                reservation_related_functions.DELETE()
             else:
                 break
         
         if choice == '3':
             while True:
-                print('\n.1 Add Ride')
-                print('2. View Ride')
-                print('3. Change Ride')
-                print('4. Delete Ride')
-                print('5. Back')
+                print('\n.1. View Ride')
+                print('2. Back')
         while True:
             choice = input('Please select menu option:')
-            if not choice.isdighit() or len(choice) > 1 or choice not in '1234':
+            if not choice.isdighit() or len(choice) > 1 or choice not in '12':
                     print('The option you have selected is not valid. Please try again.')
             else:
                 break
 
             if choice == '1':
-                ride_related_functions.add_ride()
-            elif choice == '2':
                 ride_related_functions.view_ride()
-            elif choice == '3':
-                ride_related_functions.change_ride()
-            elif choice == '4':
-                ride_related_functions.delete_ride()
             else:
                 break
         if choice == '4':
