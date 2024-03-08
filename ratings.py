@@ -14,7 +14,7 @@ r.execute("""CREATE TABLE IF NOT EXISTS ratings
 
 # current user needs to be inputed here
 def insertRating():
-    #user = imported id
+    #user = imported username
     currentDate = datetime.now()
     strDate = currentDate.strftime("%Y")
     numberOutOfTen = int(textBox.get())
