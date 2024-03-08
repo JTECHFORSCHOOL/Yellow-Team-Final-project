@@ -2,14 +2,14 @@ import sqlite3
 import time
 import tkinter as tk
 import datetime
-#import current user id
+#import current username
 
 
 ratings = sqlite3.connect("ratings.db")
 r = ratings.cursor()
 r.execute("""CREATE TABLE IF NOT EXISTS ratings 
         (rating INT,
-        poster INT,
+        poster STR,
         year INT)""")
 
 # current user needs to be inputed here
@@ -21,7 +21,7 @@ def insertRating():
     if numberOutOfTen >= 1:
         if numberOutOfTen <= 10:
             inserted = [
-            (numberOutOfTen , user , strDate),
+            (numberOutOfTen , str(user) , strDate),
             ]
             b.executemany("""
                 INSERT INTO ratings (rating ,poster ,year) VALUES (?,?,?)
