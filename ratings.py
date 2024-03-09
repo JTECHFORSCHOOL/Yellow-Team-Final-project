@@ -2,8 +2,11 @@ import sqlite3
 import time
 import tkinter as tk
 import datetime
-#import current username
+import psycopg2
 
+conn = psycopg2.connect("dbname=user user=char")
+mycursor = mycon.cursor()
+userName = cur.execute("SELECT * FROM user; user_name")
 
 ratings = sqlite3.connect("ratings.db")
 r = ratings.cursor()
@@ -12,9 +15,9 @@ r.execute("""CREATE TABLE IF NOT EXISTS ratings
         poster STR,
         year INT)""")
 
-# current user needs to be inputed here
+
 def insertRating():
-    #user = imported username
+    user = userName
     currentDate = datetime.now()
     strDate = currentDate.strftime("%Y")
     numberOutOfTen = int(textBox.get())
