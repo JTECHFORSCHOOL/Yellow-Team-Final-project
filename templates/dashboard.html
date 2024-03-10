@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - zTrip</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+        }
+        nav {
+            padding: 10px;
+            background-color: #444;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px 10px;
+            margin: 0 5px;
+        }
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        section {
+            background-color: #fff;
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to zTrip Dashboard</h1>
+    </header>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/users">User</a>
+        <a href="/bookings">Bookings</a>
+        <a href="/drivers">Drivers</a>
+        <a href="/payments">Payments</a>
+        <a href="/feedbacks">Feedbacks</a>
+    </nav>
+
+    <main>
+        <!-- Dashboard content goes here -->
+        <h2>Welcome, {{ username }}</h2>
+        <p>This is your personalized dashboard. You can view and manage your bookings, payments, and more.</p>
+    </main>
+
+    <footer>
+        &copy; 2024 zTrip Transportation System
+    </footer>
+</body>
+</html>

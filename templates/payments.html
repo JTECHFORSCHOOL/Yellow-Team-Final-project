@@ -1,0 +1,51 @@
+<!-- payments.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payments</title>
+    <style>
+        /* Add your CSS styles here */
+        /* Use the same styles as users.html for consistency */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Payments</h1>
+        <ul>
+            {% for payment in payments %}
+            <li>Payment ID: {{ payment.id }}</li>
+            <li>User ID: {{ payment.user_id }}</li>
+            <li>Amount: {{ payment.amount }}</li>
+            <li>Status: {{ payment.status }}</li>
+            <hr>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

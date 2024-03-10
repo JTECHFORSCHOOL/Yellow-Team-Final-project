@@ -1,0 +1,50 @@
+<!-- bookings.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookings</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bookings</h1>
+        <ul>
+            {% for booking in bookings %}
+            <li>Booking ID: {{ booking.id }}</li>
+            <li>User ID: {{ booking.user_id }}</li>
+            <li>Pickup Location: {{ booking.pickup_location }}</li>
+            <li>Dropoff Location: {{ booking.dropoff_location }}</li>
+            <hr>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
